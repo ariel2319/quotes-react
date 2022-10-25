@@ -49,12 +49,12 @@
   align-items: center;
   background: #3f3f3f;
   border: 2px solid white;
-  border-radius: 0 10px 0 10px;
-  box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 0 40px 0 40px;
+  box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .author-align{
-  width: 95%;
+  width: 90%;
   display: flex;
   justify-content: flex-end;
 }
@@ -62,5 +62,6 @@
 .foot-container{
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10%;
   color: crimson;
 }

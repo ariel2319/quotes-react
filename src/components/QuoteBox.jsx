@@ -1,35 +1,24 @@
 //que esté centrado, el cuál debe mostrar una cita al azar al momento de cargar la aplicación.
-import { useState } from 'react';
-import quotes from '../quotes.json'
-
+import quotes from '../quotes.json' 
 import React from 'react';
+import ButtonChange from './ButtonChange';
 
-const QuoteBox = () => {
-  const rdmIndex = Math.floor(Math.random() * quotes.length)
-  const [pos, setPos] = useState(rdmIndex);
+const QuoteBox = ({/* author, quote */pos, color, changeQuote}) => {
 
   const quote = `${quotes[pos].quote}`;
-  const author = `${quotes[pos].author}`;
+  const author = `${quotes[pos].author}`; 
 
-  const changeQuote = () => {
-    const anotherRdm = Math.floor(Math.random() * quotes.length)
-    setPos (anotherRdm)
-  }
-
-
-  const colors = ["#845EC2", "#D65DB1", "#FF6F91", "#FF9671", "#FFC75F", "#F9F871"]
-  const randomColorsIndex = Math.floor(Math.random() * colors.length)
-  document.body.style = `background: ${colors[randomColorsIndex]}`
-
+  document.body.style = `background: ${color}`
 
   return (
     <div className='quote-container'>
-      <h1 style={{color: colors[randomColorsIndex]}} >{quote}</h1>
+      <h1 style={{color: color}} >{quote}</h1>
       
       <div className='author-align'>
-        <h2 style={{color: colors[randomColorsIndex]}}>{author}</h2>
+        <h2 style={{color: color}}>{author}</h2>
       </div>
-      <button onClick={changeQuote} style={{background: colors[randomColorsIndex]}}><i class="fa-solid fa-retweet" ></i></button>
+      {/* <button onClick={changeQuote} style={{background: color}}><i class="fa-solid fa-retweet" ></i></button> */}
+      <ButtonChange changeQuote={changeQuote} color={color}/>
     </div>
   );
 };

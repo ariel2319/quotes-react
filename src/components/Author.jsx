@@ -1,3 +1,4 @@
+//este componente no es parte de los 3 del ejercicio..solo lo hice de prueba je
 import React from 'react';
 
 const Author = () => {
