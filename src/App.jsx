@@ -20,15 +20,17 @@ function App() {
   const randomColorsIndex = Math.floor(Math.random() * colors.length)
   
   return (
-    <div className="App" >
-      <div >
+    <div  >
+      <div className="App">
         <QuoteBox 
             pos ={pos}
             color={colors[randomColorsIndex]}
             changeQuote={changeQuote}
         />
       </div>
-      <Author/>
+      <div className='foot'>
+        <Author/>
+      </div>
     </div>
   )
 }
