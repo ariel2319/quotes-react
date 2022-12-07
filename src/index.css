@@ -44,7 +44,7 @@ h1 {
 button {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 10px 0 ;
   border: 1px solid transparent;
   box-shadow: 1px 3px 3px rgba(255, 255, 255, 0.1);
   padding: 0.6em 1.2em;
@@ -59,7 +59,9 @@ button {
   align-items: center;
 }
 button:hover {
-  border-color: #646cff;
+  transition: ease-in-out 1s;
+  transform: scale(1.2) rotate(-1440deg);
+  border: 2px solid white;
 }
 button:focus,
 button:focus-visible {

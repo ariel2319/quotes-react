@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} 
 
 .App{
   width: 50%;
@@ -25,6 +25,10 @@
   box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
+.quote-container:hover{
+  transition: ease-in-out 1s;
+  transform: scale(1.1) rotate(2deg);
+}
 .author-align{
   width: 90%;
   display: flex;
@@ -34,6 +38,7 @@
 .foot-container{
   display: flex;
   justify-content: center;
+  padding-top: 50px;
   margin-top: 15px;
   color: crimson;
 }
